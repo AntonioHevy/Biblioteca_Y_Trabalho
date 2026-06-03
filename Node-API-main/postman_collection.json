@@ -1,0 +1,219 @@
+{
+  "info": {
+    "name": "Node-API-main Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Coleção para testar as rotas da API Node.js local"
+  },
+  "item": [
+    {
+      "name": "Root",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:4400/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "4400",
+          "path": []
+        }
+      }
+    },
+    {
+      "name": "Listar autores",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:4400/autores",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "4400",
+          "path": ["autores"]
+        }
+      }
+    },
+    {
+      "name": "Buscar autor por id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:4400/autores/:id",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "4400",
+          "path": ["autores", ":id"]
+        }
+      }
+    },
+    {
+      "name": "Criar autor",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nome\": \"Priscilla Trevizan\",\n  \"nacionalidade\": \"Brasil\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:4400/autores",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "4400",
+          "path": ["autores"]
+        }
+      }
+    },
+    {
+      "name": "Atualizar autor",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nome\": \"Nome Atualizado\",\n  \"nacionalidade\": \"Portugal\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:4400/autores/:id",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "4400",
+          "path": ["autores", ":id"]
+        }
+      }
+    },
+    {
+      "name": "Deletar autor",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:4400/autores/:id",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "4400",
+          "path": ["autores", ":id"]
+        }
+      }
+    },
+    {
+      "name": "Listar livros",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:4400/livros",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "4400",
+          "path": ["livros"]
+        }
+      }
+    },
+    {
+      "name": "Buscar livro por editora",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:4400/livros/busca?editora=NomeDaEditora",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "4400",
+          "path": ["livros", "busca"],
+          "query": [
+            {
+              "key": "editora",
+              "value": "NomeDaEditora"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Buscar livro por id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:4400/livros/:id",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "4400",
+          "path": ["livros", ":id"]
+        }
+      }
+    },
+    {
+      "name": "Criar livro",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"titulo\": \"Meu Livro\",\n  \"autor\": \"<autorObjectId>\",\n  \"editora\": \"Editora X\",\n  \"numeroPaginas\": 200\n}"
+        },
+        "url": {
+          "raw": "http://localhost:4400/livros",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "4400",
+          "path": ["livros"]
+        }
+      }
+    },
+    {
+      "name": "Atualizar livro",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"titulo\": \"Livro Atualizado\",\n  \"autor\": \"<autorObjectId>\",\n  \"editora\": \"Nova Editora\",\n  \"numeroPaginas\": 250\n}"
+        },
+        "url": {
+          "raw": "http://localhost:4400/livros/:id",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "4400",
+          "path": ["livros", ":id"]
+        }
+      }
+    },
+    {
+      "name": "Deletar livro",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:4400/livros/:id",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "4400",
+          "path": ["livros", ":id"]
+        }
+      }
+    }
+  ]
+}
